@@ -1,56 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Projects</title>
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Press+Start+2P|VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/index.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
-    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Projects - George Surridge</title>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Press+Start+2P|VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .project-card {
+      background-color: #f5f5f5;
+      border: 2px solid #000;
+      padding: 15px;
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 5px 5px 0px #000;
+    }
+
+    .project-title {
+      font-family: 'VT323', monospace;
+      font-size: 24px;
+      margin: 0 0 10px 0;
+      color: #000;
+    }
+
+    .project-description {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .project-tech {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .project-link {
+      font-family: 'VT323', monospace;
+      font-size: 16px;
+      background-color: #000;
+      color: #fff;
+      padding: 5px 15px;
+      text-decoration: none;
+      border: 2px solid #000;
+      display: inline-block;
+    }
+
+    .project-link:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    @media only screen and (max-device-width: 480px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="main">
-  
+  <div class="main">
     <div id="home___mainbox">
-  
       <div id="home___tool-bar">
         <div id="home___tool-bar-name">
           <div class="home___namebar-fill"></div>
           <div id="home___namebar">
-              <a href="index.html" style="text-decoration: none; color: inherit;">George Surridge</a>
+            <a href="index.html" style="text-decoration: none; color: inherit;">George Surridge</a>
           </div>
           <div class="home___namebar-fill"></div>
-  
         </div>
-      <div id="home___tool-bar-tiles">
+        
+        <div id="home___tool-bar-tiles">
           <div id="home___tool-bar___entries">
-            <a class="home___tool-bar-button" href="https://github.com/gg2io"><div class="home___tool-bar__entry"><p class="home___tool-bar__entry-text">GitHub</p></div></a>
-            <a class="home___tool-bar-button" href="projects.html"><div class="home___tool-bar__entry" ><p class="home___tool-bar__entry-text">Projects</p></div></a>
-            <a class="home___tool-bar-button" href="about.html"> <div class="home___tool-bar__entry"><p class="home___tool-bar__entry-text">About</p></div></a>
-            <a class="home___tool-bar-button" href="contact.html"> <div class="home___tool-bar__entry"><p class="home___tool-bar__entry-text">Contact</p></div></a>
+            <a class="home___tool-bar-button" href="https://github.com/gg2io" target="_blank" rel="noopener">
+              <div class="home___tool-bar__entry">
+                <p class="home___tool-bar__entry-text">GitHub</p>
+              </div>
+            </a>
+            <a class="home___tool-bar-button" href="https://linkedin.com/in/georgesurridge/" target="_blank" rel="noopener">
+              <div class="home___tool-bar__entry">
+                <p class="home___tool-bar__entry-text">LinkedIn</p>
+              </div>
+            </a>
+            <a class="home___tool-bar-button" href="projects.html">
+              <div class="home___tool-bar__entry">
+                <p class="home___tool-bar__entry-text">Projects</p>
+              </div>
+            </a>
+            <a class="home___tool-bar-button" href="about.html">
+              <div class="home___tool-bar__entry">
+                <p class="home___tool-bar__entry-text">About</p>
+              </div>
+            </a>
+            <a class="home___tool-bar-button" href="contact.html">
+              <div class="home___tool-bar__entry">
+                <p class="home___tool-bar__entry-text">Contact</p>
+              </div>
+            </a>
           </div>
+        </div>
+      </div>
       
-        </div>
-      </div>
       <div class="home__content">
-      <div class="home__typewriter">
-          <div class="output" id="output">
-            <h1 style="margin-top: 0px; margin-bottom:0px;"></h1>
-          </div>
-          <div id="home___text">
-              <p class="home___mainbox-text">this site is under construction.</p>
-              <p class="home___mainbox-text">this site is under construction.</p>
-  
+        <h1 style="font-family: 'VT323', monospace; font-size: 32px; margin-top: 10px;">My Projects</h1>
+        
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <h2 class="project-title">Project Name 1</h2>
+            <p class="project-description">
+              A brief description of your project. Explain what it does, the problem it solves, or what you learned building it.
+            </p>
+            <p class="project-tech"><strong>Tech:</strong> JavaScript, React, Node.js</p>
+            <div class="project-links">
+              <a href="https://github.com/gg2io/project1" class="project-link" target="_blank" rel="noopener">GitHub</a>
+              <a href="#" class="project-link" target="_blank" rel="noopener">Live Demo</a>
             </div>
-        </div>
-      <div id="home___image-holder">
-        <img id="home___image" src="" alt="">
-  
-      </div>
+          </div>
 
-    </div>
+          <!-- Project 2 -->
+          <div class="project-card">
+            <h2 class="project-title">Project Name 2</h2>
+            <p class="project-description">
+              Another project description. Highlight the key features or technologies you used to build this.
+            </p>
+            <p class="project-tech"><strong>Tech:</strong> Python, Flask, PostgreSQL</p>
+            <div class="project-links">
+              <a href="https://github.com/gg2io/project2" class="project-link" target="_blank" rel="noopener">GitHub</a>
+              <a href="#" class="project-link" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <h2 class="project-title">NodeDnB Site</h2>
+            <p class="project-description">
+              A drum and bass music website. Features a collection of tracks, mixes, and information about the DnB scene.
+            </p>
+            <p class="project-tech"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            <div class="project-links">
+              <a href="https://github.com/gg2io" class="project-link" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://nodednb.com" class="project-link" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <h2 class="project-title">Project Name 4</h2>
+            <p class="project-description">
+              Describe another project here. You can add as many project cards as you need by copying this structure.
+            </p>
+            <p class="project-tech"><strong>Tech:</strong> Vue.js, Express, MongoDB</p>
+            <div class="project-links">
+              <a href="https://github.com/gg2io/project4" class="project-link" target="_blank" rel="noopener">GitHub</a>
+              <a href="#" class="project-link" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
