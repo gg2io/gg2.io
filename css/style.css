@@ -26,7 +26,7 @@
 
 body{
 margin:0;
-overflow: hidden;
+overflow: auto; /* Changed from hidden to allow scrolling */
 background-color: var(--window);
 
 }
@@ -98,15 +98,17 @@ border-width: thick;
 display: flex;
 flex-direction: row;
 justify-content: flex-start;
-height: 3vh;
+flex-wrap: wrap;
+height: auto;
 margin-left:1px;
 }
 
 #home___tool-bar-tiles{
-height: 3vh;
+height: auto;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+flex-wrap: wrap;
 margin-top:1px;
 }
 .home___tool-bar__entry{
@@ -137,7 +139,7 @@ line-height: 2.5vh;
 .home__content{
 display: flex;
 flex-direction: column;
-justify-content: space-around;
+justify-content: flex-start;
 margin-left: 1vh;
 margin-right:1vh;
 height:100%;
@@ -229,45 +231,179 @@ width:35vh;
 /* object-position: 0 15%; */
 }
 
-/*https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile*/
-@media only screen and (max-device-width: 480px){
-#home___mainbox{
-  background-color: var(--white);
-  height:80%;
-  width:95%;
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  padding-top: 1px;
-  justify-content: space-between;
-  margin-top: auto;
-  margin-bottom: auto;
-  box-shadow: 20px 20px 10px #0A3B76;
-}
-
-.output > h1{
+/* Projects Page Styles */
+.projects-page-title {
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 2.5vh;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: normal;
 }
 
-.home___mainbox-text{
-  font-size: 2vh;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
 }
 
-#home___namebar{
-  font-size: 3.25vh;
-}
-.home___tool-bar__entry{
-  font-size:2vh;
-}
-
-.aboutme{
-  display: block;
-}
+.project-card {
+  background-color: #f5f5f5;
+  border: 2px solid #000;
+  padding: 15px;
+  transition: transform 0.2s;
+  box-sizing: border-box;
 }
 
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 0px #000;
+}
 
+.project-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+  color: #000;
+}
 
+.project-description {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.project-tech {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.project-link {
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  padding: 5px 15px;
+  text-decoration: none;
+  border: 2px solid #000;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.project-link:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/*https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile*/
+
+/* Tablet and smaller devices */
+@media only screen and (max-width: 768px) {
+  #home___mainbox {
+    min-width: unset; /* Remove fixed minimum */
+    width: 95%;
+    height: 85vh;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .project-card {
+    padding: 12px;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  .project-description {
+    font-size: 13px;
+  }
+
+  .project-tech {
+    font-size: 11px;
+  }
+
+  .project-link {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+
+  .projects-page-title {
+    font-size: 2.2vh;
+  }
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 480px){
+  #home___mainbox{
+    background-color: var(--white);
+    height:80%;
+    width:98%; /* Increased from 95% */
+    min-width: unset; /* Remove fixed minimum */
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1px;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: auto;
+    box-shadow: 20px 20px 10px #0A3B76;
+  }
+
+  .output > h1{
+    font-size: 2.5vh;
+  }
+
+  .home___mainbox-text{
+    font-size: 2vh;
+  }
+
+  #home___namebar{
+    font-size: 3.25vh;
+  }
+  .home___tool-bar__entry{
+    font-size:2vh;
+  }
+
+  .aboutme{
+    display: block;
+  }
+
+  .projects-grid {
+    padding: 10px 0;
+    gap: 12px;
+  }
+
+  .project-card {
+    padding: 10px;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .project-link {
+    text-align: center;
+    width: 100%;
+  }
+}
 
 @media only screen and (min-width:1900px){
 #home___mainbox{
@@ -304,137 +440,6 @@ width:35vh;
 }
 
 }
-
-/* Projects Page Styles */
-.projects-page-title {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 2.5vh;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-weight: normal;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px 0;
-}
-
-.project-card {
-  background-color: #f5f5f5;
-  border: 2px solid #000;
-  padding: 15px;
-  transition: transform 0.2s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 5px 5px 0px #000;
-}
-
-.project-title {
-  font-family: 'VT323', monospace;
-  font-size: 24px;
-  margin: 0 0 10px 0;
-  color: #000;
-}
-
-.project-description {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.project-tech {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.project-links {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.project-link {
-  font-family: 'VT323', monospace;
-  font-size: 16px;
-  background-color: #000;
-  color: #fff;
-  padding: 5px 15px;
-  text-decoration: none;
-  border: 2px solid #000;
-  display: inline-block;
-}
-
-.project-link:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-/* Mobile optimizations for Projects */
-@media only screen and (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 15px 0;
-  }
-
-  .project-card {
-    padding: 12px;
-  }
-
-  .project-title {
-    font-size: 20px;
-  }
-
-  .project-description {
-    font-size: 13px;
-  }
-
-  .project-tech {
-    font-size: 11px;
-  }
-
-  .project-link {
-    font-size: 14px;
-    padding: 5px 12px;
-  }
-
-  .projects-page-title {
-    font-size: 2.2vh;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .projects-grid {
-    padding: 10px 0;
-    gap: 12px;
-  }
-
-  .project-card {
-    padding: 10px;
-  }
-
-  .project-links {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .project-link {
-    text-align: center;
-    width: 100%;
-  }
-}
-
-
-
-
 
 /*
 
