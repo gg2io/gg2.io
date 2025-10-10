@@ -7,7 +7,7 @@
 **gg2.io** is the personal portfolio and project site of **George Surridge**.  
 It showcases creative and technical work, ongoing projects, and professional experience in a clean, retro format.
 
-**Live Site:** [gg2.io](https://gg2.io)  
+**Live Site:** [gg2.io](https://www.gg2.io)  
 
 ---
 
