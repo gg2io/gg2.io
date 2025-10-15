@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Content to be typed out
   const content = [
     { type: 'h1', text: 'About Me', style: 'font-family: "IBM Plex Mono", monospace; font-size: 2.5vh; margin-top: 10px; margin-bottom: 20px; font-weight: normal;' },
-    { type: 'p', text: "Hi! I'm George, a DevOps engineer passionate about creating web applications and exploring new technologies.", class: 'home___mainbox-text' },
+    { type: 'p', text: "Hi! I'm George, an infrastructure engineer passionate about creating web applications and exploring new technologies.", class: 'home___mainbox-text' },
     { type: 'p', text: 'I enjoy working on both frontend and backend development, with experience in HTML, CSS, JavaScript, Python, and various frameworks.', class: 'home___mainbox-text' },
     { type: 'p', text: "When I'm not coding, you can find me listening to drum and bass music or working on my music website.", class: 'home___mainbox-text' },
     { type: 'h2', text: 'Skills', style: 'font-family: "IBM Plex Mono", monospace; font-size: 2.5vh; margin-top: 20px; margin-bottom: 10px; font-weight: normal;' },
