@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #37474f;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    height: 400px;
+    background-color: #232931;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.left-info{
+    width: 260px;
+    height: 100%;
+    float: left;
+    display: flex;
+    border-radius: 25px;
+    justify-content: center;
+    background: url("1.jpg");
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.03) perspective(200px);
+    cursor: pointer;
+    box-shadow: 0 0 20px -10px rrgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.left-info:hover{
+    transform: scale(1.1) perspective(2500px) rotateY(5deg);
+}
+
+.pic-gradient{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #5c6bc0 10%, #0d47a1 100%);
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+.today-info{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.today-weather{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 20px;
+    left: 20px;
+}
+
+.today-weather .bx{
+    font-size: 4.6rem;
+}
+
+.weather-temp{
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+.right-info{
+    float: right;
+    position: relative;
+    height: 100%;
+    padding-top: 25px;
+}
+
+.day-info{
+    padding: 25px 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.day-info div:not(:last-child){
+    margin-bottom: 6px;
+}
+
+.day-info div .title{
+    font-weight: 700;
+}
+
+.day-info div .value{
+    float: right;
+}
+
+.days-list{
+    display: flex;
+    list-style: none;
+    margin: 10px 35px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+}
+
+.days-list li{
+    padding: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.days-list li .bx{
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+
+.days-list li:hover{
+    transform: scale(1.1);
+    background: #fff;
+    color: #222831;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.days-list li .day-temp{
+    margin-top: 6px;
+    font-weight: 700;
+}
+
+.search-box{
+    width: 100%;
+    padding: 25px 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-box input{
+    color: #fff;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-color: transparent;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    background: #303f9f;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+    padding-left: 20px;
+    padding-right: 55px;
+}
+
+.search-box input::placeholder{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: none;
+    padding-left: 1px;
+}
+
+.search-box button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283D;
+    border-color: transparent;
+    background: #303f9f;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: 0.4s ease;
+    margin-left: -100px;
+}
+
+.search-box button:hover{
+    color: #fff;
+    background: #06283D;
+}
+
+
+/* ============================================
+   MOBILE OPTIMIZATIONS
+   Only affects screens smaller than 768px
+   ============================================ */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .container {
+        height: auto;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .left-info {
+        width: 100%;
+        min-height: 280px;
+        float: none;
+        border-radius: 25px 25px 0 0;
+        transform: scale(1);
+        position: relative;
+    }
+
+    .left-info:hover {
+        transform: scale(1.02);
+    }
+
+    .pic-gradient {
+        border-radius: 25px 25px 0 0;
+    }
+
+    .today-info {
+        margin-top: 20px;
+        padding: 0 20px;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .today-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .today-info span {
+        font-size: 0.9rem;
+    }
+
+    .today-weather {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        align-items: center;
+    }
+
+    .today-weather .bx {
+        font-size: 3.5rem;
+    }
+
+    .weather-temp {
+        font-size: 2.8rem;
+    }
+
+    .today-weather h3 {
+        font-size: 1rem;
+    }
+
+    .right-info {
+        float: none;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .day-info {
+        padding: 20px 25px;
+    }
+
+    .day-info div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    .day-info div .title {
+        font-size: 0.85rem;
+    }
+
+    .day-info div .value {
+        font-size: 0.85rem;
+    }
+
+    .days-list {
+        margin: 10px 25px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        justify-content: center;
+    }
+
+    .days-list li {
+        padding: 20px 15px;
+        min-width: 70px;
+        flex-shrink: 0;
+    }
+
+    .days-list li .bx {
+        font-size: 1.8rem;
+    }
+
+    .days-list li span {
+        font-size: 0.9rem;
+    }
+
+    .days-list li .day-temp {
+        font-size: 0.95rem;
+    }
+
+    .search-box {
+        padding: 20px 25px;
+    }
+
+    .search-box input {
+        padding: 12px 20px;
+        font-size: 16px;
+        padding-right: 50px;
+    }
+
+    .search-box input::placeholder {
+        font-size: 16px;
+    }
+
+    .search-box button {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        font-size: 16px;
+        margin-left: -55px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+    .container {
+        border-radius: 20px;
+    }
+
+    .left-info {
+        min-height: 250px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .pic-gradient {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .today-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .weather-temp {
+        font-size: 2.5rem;
+    }
+
+    .today-weather .bx {
+        font-size: 3rem;
+    }
+
+    .day-info {
+        padding: 15px 20px;
+    }
+
+    .days-list {
+        margin: 10px 20px;
+    }
+
+    .days-list li {
+        padding: 15px 10px;
+        min-width: 60px;
+    }
+
+    .search-box {
+        padding: 15px 20px;
+    }
+}
+
+/* Back to main site button */
+.back-to-main {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.back-to-main a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #232931;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+}
+
+.back-to-main a:hover {
+    background-color: #3A6EA5;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .back-to-main {
+        top: 10px;
+        left: 10px;
+    }
+    
+    .back-to-main a {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
