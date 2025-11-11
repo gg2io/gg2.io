@@ -1,6 +1,6 @@
 .terminal-container {
-  font-family: 'VT323', monospace;
-  font-size: 2.8vh;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 2.5vh;
   line-height: 1.8;
   padding: 40px;
   color: var(--licorice);
