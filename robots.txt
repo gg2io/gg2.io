@@ -1,0 +1,8 @@
+# robots.txt for gg2.io
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.gg2.io/sitemap.xml
