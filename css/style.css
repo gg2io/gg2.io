@@ -439,3 +439,20 @@ font-family: 'Press Start 2P', cursive;
 font-family: 'IBM Plex Mono', monospace;
 font-family: 'VT323', monospace;
 */
+
+/* Footer */
+.site-footer {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 500;
+}
+
+.site-footer p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
