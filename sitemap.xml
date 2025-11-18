@@ -7,31 +7,31 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.gg2.io/about.html</loc>
+    <loc>https://www.gg2.io/about</loc>
     <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.gg2.io/projects.html</loc>
+    <loc>https://www.gg2.io/projects</loc>
     <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.gg2.io/assets/projects/typespeed/index.html</loc>
+    <loc>https://www.gg2.io/assets/projects/typespeed/</loc>
     <lastmod>2025-11-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.gg2.io/assets/projects/weatherapp/index.html</loc>
+    <loc>https://www.gg2.io/assets/projects/weatherapp/</loc>
     <lastmod>2025-11-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.gg2.io/assets/projects/nodednb/index.html</loc>
+    <loc>https://www.gg2.io/assets/projects/nodednb/</loc>
     <lastmod>2025-11-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
