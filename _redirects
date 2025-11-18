@@ -1,0 +1,9 @@
+# Redirect non-www to www
+https://gg2.io/* https://www.gg2.io/:splat 301
+
+# Redirect .html to pretty URLs
+/about.html /about 301
+/projects.html /projects 301
+/assets/projects/typespeed/index.html /assets/projects/typespeed/ 301
+/assets/projects/weatherapp/index.html /assets/projects/weatherapp/ 301
+/assets/projects/nodednb/index.html /assets/projects/nodednb/ 301
