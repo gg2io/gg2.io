@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /cdn-cgi/
 
 # Sitemap location
 Sitemap: https://www.gg2.io/sitemap.xml
