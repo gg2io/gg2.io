@@ -155,8 +155,11 @@ export function useTimer(): UseTimerReturn {
   }, [isRunning, timeLeft, mode, settings, completedPomodoros])
 
   const start = useCallback(() => {
-    if (Notification.permission === 'default') {
-      Notification.requestPermission()
+    // Request notification permission on first start
+    if (typeof Notification !== 'undefined' && Notification.permission === 'default') {
+      Notification.requestPermission().catch(() => {
+        // Silently handle permission errors
+      })
     }
     setIsRunning(true)
   }, [])
