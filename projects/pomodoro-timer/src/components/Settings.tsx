@@ -32,8 +32,14 @@ export function Settings({ settings, onSave, onClose }: SettingsProps) {
   }
 
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-      <div className="backdrop-blur-xl bg-white/10 rounded-3xl p-6 w-full max-w-sm border border-white/20 shadow-2xl">
+    <div
+      className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-[1100] p-4"
+      onClick={onClose}
+    >
+      <div
+        className="backdrop-blur-xl bg-white/10 rounded-3xl p-6 w-full max-w-sm border border-white/20 shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-light text-white">Settings</h2>
           <button

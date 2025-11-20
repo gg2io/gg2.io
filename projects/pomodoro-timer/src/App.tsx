@@ -135,7 +135,7 @@ function App() {
 
       {/* Light Overlay for readability */}
       <div
-        className="absolute inset-0 z-[1]"
+        className="absolute inset-0 z-[1] pointer-events-none"
         style={{
           backgroundColor: 'rgba(0, 0, 0, 0.3)',
           transition: 'background-color 0.8s ease-in-out',
