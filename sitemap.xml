@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://www.gg2.io/projects</loc>
-    <lastmod>2025-11-11</lastmod>
+    <lastmod>2025-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -33,6 +33,12 @@
   <url>
     <loc>https://www.gg2.io/projects/nodednb/</loc>
     <lastmod>2025-11-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.gg2.io/projects/pomodoro-timer/</loc>
+    <lastmod>2025-11-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
