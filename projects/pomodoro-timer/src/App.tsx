@@ -148,7 +148,7 @@ function App() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-[600] flex flex-col items-center">
+      <div className="relative z-[600] flex flex-col items-center pb-24 md:pb-0">
         {/* Mode Selector */}
         <div className="mb-6">
           <ModeSelector mode={mode} onModeChange={setMode} />

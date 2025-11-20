@@ -18,26 +18,43 @@ export function Controls({ isRunning, onStart, onPause, onReset, onSettings, isF
     onReset()
     setTimeout(() => setIsSpinning(false), 500)
   }
+
+  const handleStart = (e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    onStart()
+  }
+
+  const handlePause = (e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    onPause()
+  }
+
   return (
-    <div className="flex items-center gap-3 md:gap-4">
+    <div className="flex items-center gap-3 md:gap-4 touch-auto">
       {isRunning ? (
         <button
-          onClick={onPause}
-          className="flex items-center justify-center w-16 h-16 md:w-14 md:h-14 bg-black/30 hover:bg-black/40 active:bg-black/50 text-white rounded-full transition-all duration-200 border border-white/20 shadow-lg"
+          onClick={handlePause}
+          onTouchEnd={handlePause}
+          className="flex items-center justify-center w-16 h-16 md:w-14 md:h-14 bg-black/30 hover:bg-black/40 active:bg-black/50 text-white rounded-full transition-all duration-200 border border-white/20 shadow-lg touch-auto"
+          style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
         >
-          <Pause size={28} className="md:w-6 md:h-6" />
+          <Pause size={28} className="md:w-6 md:h-6 pointer-events-none" />
         </button>
       ) : (
         <button
-          onClick={onStart}
+          onClick={handleStart}
+          onTouchEnd={handleStart}
           disabled={isFinished}
-          className={`flex items-center justify-center w-16 h-16 md:w-14 md:h-14 rounded-full transition-all duration-200 border border-white/20 shadow-lg ${
+          className={`flex items-center justify-center w-16 h-16 md:w-14 md:h-14 rounded-full transition-all duration-200 border border-white/20 shadow-lg touch-auto ${
             isFinished
               ? 'bg-black/10 text-white/30 cursor-not-allowed'
               : 'bg-black/30 hover:bg-black/40 active:bg-black/50 text-white'
           }`}
+          style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
         >
-          <Play size={28} className="ml-1 md:w-6 md:h-6" />
+          <Play size={28} className="ml-1 md:w-6 md:h-6 pointer-events-none" />
         </button>
       )}
       <button
