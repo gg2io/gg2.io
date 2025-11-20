@@ -141,6 +141,44 @@ function App() {
         }}
       />
 
+      {/* Back Button */}
+      <div
+        style={{
+          position: 'fixed',
+          top: '20px',
+          left: '20px',
+          zIndex: 1000
+        }}
+      >
+        <a
+          href="../../projects.html"
+          style={{
+            display: 'inline-block',
+            padding: '10px 20px',
+            backgroundColor: '#232931',
+            color: '#fff',
+            textDecoration: 'none',
+            borderRadius: '25px',
+            fontSize: '14px',
+            fontWeight: 500,
+            boxShadow: '0 5px 15px rgba(0, 0, 0, 0.35)',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#3A6EA5'
+            e.currentTarget.style.transform = 'translateY(-2px)'
+            e.currentTarget.style.boxShadow = '0 7px 20px rgba(0, 0, 0, 0.45)'
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#232931'
+            e.currentTarget.style.transform = 'translateY(0)'
+            e.currentTarget.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.35)'
+          }}
+        >
+          ← Back
+        </a>
+      </div>
+
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center">
         {/* Mode Selector */}
@@ -200,6 +238,30 @@ function App() {
           onClose={() => setShowSettings(false)}
         />
       )}
+
+      {/* Footer */}
+      <footer
+        style={{
+          position: 'fixed',
+          bottom: '10px',
+          left: 0,
+          right: 0,
+          textAlign: 'center',
+          zIndex: 10
+        }}
+      >
+        <p
+          style={{
+            fontFamily: 'monospace',
+            fontSize: '12px',
+            color: 'rgba(255, 255, 255, 0.6)',
+            margin: 0,
+            textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)'
+          }}
+        >
+          © 2025 George Surridge. All rights reserved.
+        </p>
+      </footer>
     </div>
   )
 }
