@@ -40,14 +40,6 @@ body {
   margin: 0;
 }
 
-@media (max-width: 768px) {
-  .site-footer {
-    position: relative;
-    margin-top: 40px;
-    padding-bottom: 20px;
-  }
-}
-
 /* Back button */
 .back-to-main {
   position: fixed;
@@ -77,6 +69,10 @@ body {
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
+  body {
+    padding-bottom: 60px;
+  }
+
   .back-to-main {
     top: 10px;
     left: 10px;
