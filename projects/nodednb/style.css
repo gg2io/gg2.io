@@ -106,9 +106,26 @@ img {
         top: 10px;
         left: 10px;
     }
-    
+
     .back-to-main a {
         padding: 8px 15px;
         font-size: 12px;
     }
+}
+
+/* Footer */
+.site-footer {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 500;
+}
+
+.site-footer p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
 }

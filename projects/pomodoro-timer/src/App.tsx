@@ -115,13 +115,14 @@ function App() {
   }, [isRunning, start, pause, reset])
 
   return (
-    <div
-      className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 relative overflow-hidden"
-      style={{
-        background: currentTheme.gradient,
-        transition: 'background 0.8s ease-in-out',
-      }}
-    >
+    <>
+      <div
+        className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 relative overflow-hidden"
+        style={{
+          background: currentTheme.gradient,
+          transition: 'background 0.8s ease-in-out',
+        }}
+      >
       {/* Background Image */}
       {currentTheme.backgroundImage && (
         <div
@@ -238,31 +239,13 @@ function App() {
           onClose={() => setShowSettings(false)}
         />
       )}
+      </div>
 
       {/* Footer */}
-      <footer
-        style={{
-          position: 'fixed',
-          bottom: '10px',
-          left: 0,
-          right: 0,
-          textAlign: 'center',
-          zIndex: 10
-        }}
-      >
-        <p
-          style={{
-            fontFamily: 'monospace',
-            fontSize: '12px',
-            color: 'rgba(255, 255, 255, 0.6)',
-            margin: 0,
-            textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)'
-          }}
-        >
-          © 2025 George Surridge. All rights reserved.
-        </p>
+      <footer className="site-footer">
+        <p>© 2025 George Surridge. All rights reserved.</p>
       </footer>
-    </div>
+    </>
   )
 }
 
