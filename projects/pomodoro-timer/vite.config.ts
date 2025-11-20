@@ -5,5 +5,9 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   base: '/projects/pomodoro-timer/',
+  build: {
+    outDir: '.',
+    emptyOutDir: false,
+  },
   plugins: [react(), tailwindcss()],
 })
