@@ -148,7 +148,7 @@ function App() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center">
+      <div className="relative z-[600] flex flex-col items-center">
         {/* Mode Selector */}
         <div className="mb-6">
           <ModeSelector mode={mode} onModeChange={setMode} />
@@ -183,7 +183,7 @@ function App() {
       </div>
 
       {/* Sound Mixer - Bottom */}
-      <div className="absolute bottom-4 left-4 right-4 md:left-6 md:right-auto md:bottom-6 z-10 w-auto md:w-80">
+      <div className="absolute bottom-4 left-4 right-4 md:left-6 md:right-auto md:bottom-6 z-[600] w-auto md:w-80">
         <SoundMixer
           sounds={sounds}
           onToggle={toggleSound}
@@ -192,7 +192,7 @@ function App() {
       </div>
 
       {/* Keyboard shortcuts hint - hidden on mobile */}
-      <div className="hidden md:block absolute bottom-6 right-6 z-10 text-xs text-white/40">
+      <div className="hidden md:block absolute bottom-6 right-6 z-[600] text-xs text-white/40">
         <span className="px-2 py-1 bg-black/20 rounded">Space</span> start/pause
         <span className="mx-2">·</span>
         <span className="px-2 py-1 bg-black/20 rounded">R</span> reset
