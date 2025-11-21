@@ -78,6 +78,11 @@ padding-bottom: 1px;
 padding-top:1px;
 
 }
+
+#home___namebar a {
+text-decoration: none;
+color: inherit;
+}
 .home___namebar-fill{
 margin: 5px;
 width:100%;
@@ -140,6 +145,7 @@ line-height: 2.5vh;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
+padding-top: 10px;
 margin-left: 1vh;
 margin-right:1vh;
 height:100%;
@@ -155,6 +161,8 @@ margin-bottom: 0;
 }
 .output > h1{
 font-size: 2.5vh;
+margin-top: 0;
+margin-bottom: 0;
 }
 
 /* Cursor Styling */
@@ -213,7 +221,13 @@ color: var(--licorice);
 margin-top:1px;
 }
 
+#home___text {
+margin-top: 15px;
+}
 
+#home__links {
+margin-top: 25px;
+}
 
 #home___image{
 display: block;
