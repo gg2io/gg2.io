@@ -1,6 +1,3 @@
-# Redirect non-www to www
-https://gg2.io/* https://www.gg2.io/:splat 301
-
 # Redirect .html to pretty URLs
 /about.html /about 301
 /projects.html /projects 301
