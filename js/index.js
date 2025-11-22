@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Create blinking cursor span
   const cursor = document.createElement("span");
   cursor.classList.add("blinking-cursor");
-  cursor.textContent = "";
   output.appendChild(cursor);
 
   function type() {

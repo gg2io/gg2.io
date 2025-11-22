@@ -4,17 +4,20 @@
   --window: #3A6EA5;
 }
 
-.blinking-cursor {
-  display: inline-block;
-  margin-left: 2px;
-  width: 10px; /* Increase width */
-  height: 1em;
-  background-color: #00ff00; /* Green, matches previous color */
+.blinking-cursor::after {
+  content: '█';
+  display: inline;
+  color: #00ff00;
+  font-weight: bold;
   animation: blink 1s step-start infinite;
+  margin-left: 2px;
 }
 
 @keyframes blink {
-  50% {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
     opacity: 0;
   }
 }
@@ -153,14 +156,38 @@ margin-bottom: 0;
 }
 .output > h1{
 font-size: 2.5vh;
-margin-top: 0;
+margin-top: 1px;
 margin-bottom: 0;
+min-height: 2.5vh;
+line-height: 2.5vh;
+}
+
+/* Cursor Styling */
+
+.cursor::after {
+  content:'';
+  display:inline-block;
+  margin-left:3px;
+  background-color:pink;
+  animation-name:blink;
+  animation-duration:0.5s;
+  animation-iteration-count: infinite;
+  line-height: 1vh;
+  vertical-align: middle;
+}
+
+h1.cursor::after {
+height:2.6vh;
+width:1vh;
+line-height: 2.6vh;
 }
 
 .home___mainbox-text{
 font-family: 'IBM Plex Mono', monospace;
 font-size: 2vh;
 color: var(--licorice);
+margin-top: 0px;
+margin-bottom: 1.5vh;
 }
 
 
@@ -178,7 +205,12 @@ margin-top:1px;
 }
 
 #home___text {
-margin-top: 0;
+margin-top: 0px;
+padding-top: 0;
+}
+
+.home__typewriter #home___text {
+margin-top: 17px;
 }
 
 #home__links {
