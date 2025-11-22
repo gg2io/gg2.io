@@ -1,10 +1,6 @@
 :root{
   --white: #FFFFFF;
   --licorice: #000000;
-  --blue-green: #2EC4B6;
-  --redical: #FF3366;
-  --florange: #E4572E;
-  --gray: #D2CECD;
   --window: #3A6EA5;
 }
 
@@ -137,10 +133,6 @@ padding-right: 1vh;
 line-height: 3vh;
 }
 
-.home___tool-bar__exit{
-line-height: 2.5vh;
-}
-
 .home__content{
 display: flex;
 flex-direction: column;
@@ -163,42 +155,6 @@ margin-bottom: 0;
 font-size: 2.5vh;
 margin-top: 0;
 margin-bottom: 0;
-}
-
-/* Cursor Styling */
-
-.cursor::after {
-  content:'';
-  display:inline-block;
-  margin-left:3px;
-  background-color:pink;
-  animation-name:blink;
-  animation-duration:0.5s;
-  animation-iteration-count: infinite;
-  line-height: 1vh;
-  vertical-align: middle;
-
-}
-
-h1.cursor::after {
-height:2.6vh;
-width:1vh;
-line-height: 2.6vh;
-}
-
-@keyframes blink {
-0% {
-  opacity:1;
-}
-49% {
-  opacity:1;
-}
-50% {
-  opacity:0;
-}
-100% {
-  opacity:0;
-}
 }
 
 .home___mainbox-text{
@@ -383,10 +339,6 @@ max-height: 25vh;
   }
   .home___tool-bar__entry{
     font-size:2vh;
-  }
-
-  .aboutme{
-    display: block;
   }
 
   .projects-grid {
