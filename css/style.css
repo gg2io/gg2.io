@@ -240,7 +240,7 @@ max-height: 25vh;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 2.5vh;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: normal;
 }
 
@@ -248,7 +248,7 @@ max-height: 25vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 20px 0;
+  padding: 0 0 20px 0;
 }
 
 .project-card {
