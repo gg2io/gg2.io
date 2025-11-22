@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       
       charIndex++;
-      setTimeout(type, 30); // Faster typing speed
+      setTimeout(type, 50); // Faster typing speed
     } else {
       // Check if this is the last section
       if (section.lastSection) {
@@ -74,6 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Start typing
-  type();
+  // Start typing with initial delay to show cursor first
+  setTimeout(type, 150);
 });

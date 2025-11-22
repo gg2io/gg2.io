@@ -33,5 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  type();
+  // Start typing with initial delay to show cursor first
+  setTimeout(type, 150);
 });

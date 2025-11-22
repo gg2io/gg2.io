@@ -32,5 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  typeCommand();
+  // Start typing with initial delay to show cursor first
+  setTimeout(typeCommand, 150);
 });
