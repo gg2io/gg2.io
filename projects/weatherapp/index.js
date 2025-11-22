@@ -235,6 +235,7 @@ function handleSearch(){
     fetchWeatherData(location);
     inputElement.value = '';
     inputElement.blur();
+    hideSuggestions();
 }
 
 search.addEventListener('click', handleSearch);
