@@ -144,7 +144,7 @@ function App() {
 
       {/* Back Button */}
       <div className="back-to-main">
-        <a href="../../projects.html">← Back</a>
+        <a href="/projects">← Back</a>
       </div>
 
       {/* Main Content */}
