@@ -80,3 +80,66 @@ img {
 	height: auto;
 	max-width: 50px;
 }
+
+/* Back to main site button */
+.back-to-main {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.back-to-main a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #232931;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+}
+
+.back-to-main a:hover {
+    background-color: #3A6EA5;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.45);
+    text-decoration: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 60px;
+    }
+
+    .back-to-main {
+        top: 10px;
+        left: 10px;
+    }
+
+    .back-to-main a {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+
+/* Footer */
+.site-footer {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 500;
+}
+
+.site-footer p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
