@@ -1,6 +1,17 @@
+# Redirect index.html to root
+/index.html / 301
+
 # Redirect .html to pretty URLs
 /about.html /about 301
 /projects.html /projects 301
+
+# Redirect old /assets/projects/* paths to correct /projects/* paths
+/assets/projects/typespeed/* /projects/typespeed/:splat 301
+/assets/projects/weatherapp/* /projects/weatherapp/:splat 301
+/assets/projects/nodednb/* /projects/nodednb/:splat 301
+/assets/projects/pomodoro-timer/* /projects/pomodoro-timer/:splat 301
+
+# Redirect project index.html files to directory with trailing slash
 /projects/typespeed/index.html /projects/typespeed/ 301
 /projects/weatherapp/index.html /projects/weatherapp/ 301
 /projects/nodednb/index.html /projects/nodednb/ 301
