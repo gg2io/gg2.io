@@ -6,9 +6,13 @@
 /projects.html /projects 301
 
 # Redirect old /assets/projects/* paths to correct /projects/* paths
+/assets/projects/typespeed/index.html /projects/typespeed/ 301
 /assets/projects/typespeed/* /projects/typespeed/:splat 301
+/assets/projects/weatherapp/index.html /projects/weatherapp/ 301
 /assets/projects/weatherapp/* /projects/weatherapp/:splat 301
+/assets/projects/nodednb/index.html /projects/nodednb/ 301
 /assets/projects/nodednb/* /projects/nodednb/:splat 301
+/assets/projects/pomodoro-timer/index.html /projects/pomodoro-timer/ 301
 /assets/projects/pomodoro-timer/* /projects/pomodoro-timer/:splat 301
 
 # Redirect project index.html files to directory with trailing slash
