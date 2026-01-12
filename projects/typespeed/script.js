@@ -197,4 +197,11 @@ wordInput.addEventListener('input', checkWord);
 
 window.addEventListener('DOMContentLoaded', () => {
   wordQueue = newQueue();
+
+  // Update copyright year automatically
+  const footer = document.querySelector('.site-footer p');
+  if (footer) {
+    const currentYear = new Date().getFullYear();
+    footer.textContent = `© ${currentYear} George Surridge. All rights reserved.`;
+  }
 });

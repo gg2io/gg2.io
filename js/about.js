@@ -76,4 +76,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Start typing with initial delay to show cursor first
   setTimeout(type, 150);
+
+  // Update copyright year automatically
+  const footer = document.querySelector('.site-footer p');
+  if (footer) {
+    const currentYear = new Date().getFullYear();
+    footer.textContent = `© ${currentYear} George Surridge. All rights reserved.`;
+  }
 });

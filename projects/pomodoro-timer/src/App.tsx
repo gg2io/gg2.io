@@ -210,7 +210,7 @@ function App() {
 
       {/* Footer */}
       <footer className="site-footer">
-        <p>© 2025 George Surridge. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} George Surridge. All rights reserved.</p>
       </footer>
     </>
   )
