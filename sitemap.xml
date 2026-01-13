@@ -2,49 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.gg2.io/</loc>
-    <lastmod>2025-11-18</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.gg2.io/about</loc>
-    <lastmod>2025-11-11</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gg2.io/projects</loc>
-    <lastmod>2025-12-31</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gg2.io/projects/typespeed/</loc>
-    <lastmod>2025-12-05</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.gg2.io/projects/weatherapp/</loc>
-    <lastmod>2025-11-11</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.gg2.io/projects/nodednb/</loc>
-    <lastmod>2025-11-11</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.gg2.io/projects/pomodoro-timer/</loc>
-    <lastmod>2025-11-20</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.gg2.io/projects/k-sha/</loc>
-    <lastmod>2025-12-29</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
