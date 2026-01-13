@@ -16,8 +16,16 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     // Other pages - animate only on first visit after leaving home
     if (hasVisitedOtherPage) {
-      // Already visited another page, show immediately
+      // Already visited another page, show immediately without animation
+      const logo = header.querySelector('.nav-logo');
+      logo.style.transition = 'none';
       header.classList.add('nav-visible');
+      // Force a reflow to ensure the transition is disabled
+      logo.offsetHeight;
+      // Re-enable transitions after the class is applied
+      requestAnimationFrame(() => {
+        logo.style.transition = '';
+      });
     } else {
       // First page after home, animate the logo
       setTimeout(() => {
